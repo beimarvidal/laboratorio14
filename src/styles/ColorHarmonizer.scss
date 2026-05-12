@@ -1,0 +1,74 @@
+.harmonies {
+  text-align: center;
+  color: white;
+}
+
+.harmonies input {
+  width: 100%;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.scene {
+  width: 300px;
+  height: 300px;
+  margin: 80px auto;
+  perspective: 1000px;
+}
+
+.cube3d {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-25deg) rotateY(35deg);
+  animation: rotateCube 10s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 2px solid rgba(255,255,255,.2);
+  box-shadow: inset 0 0 30px rgba(0,0,0,.2);
+}
+
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+@keyframes rotateCube {
+  from {
+    transform: rotateX(-25deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(-25deg) rotateY(360deg);
+  }
+}

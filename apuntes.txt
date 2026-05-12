@@ -1,0 +1,9 @@
+modelo de color hsl (el adn del color)
+
+no usar rgb o hex para programar 
+
+hsl modelo con operaciones 
+base 
+complemantario
+triasdas 
+
